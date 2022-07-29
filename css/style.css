@@ -1,0 +1,725 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&family=Tangerine&display=swap');
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+
+ul{
+    list-style-type: none;
+    padding : 0;
+}
+/*** BODY ***/
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/*** NAV ***/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(38, 38, 38, 0.545);
+}
+
+.nav_left{
+    padding-left: 0.5rem;
+    gap: 1.2vw;
+    align-items: center;
+}
+.nav_left p{
+    font-family: 'Tangerine', cursive;
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.nav_left img{
+    width: 90px;
+    padding: 2px 0;
+}
+
+.nav_right{
+    padding-right: 3rem;
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 1.2rem;
+}
+
+ul.flex{
+    gap: 7vw;
+}
+
+ul.flex li a{
+    position: relative;
+}
+ul.flex li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+}
+ul.flex a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+/*** BURGER ***/
+.burger_nav{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    text-align: right;
+    background-color: rgba(38, 38, 38, 0.545);
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+.burger_ul{
+    margin: 1rem 0 0 0;
+    padding-right: 48px;
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 1.2rem;
+}
+
+.burger_ul li{
+    margin-bottom: 1rem;
+}
+
+.burger_ul li a{
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+.burger_ul li a:hover{
+    text-decoration: underline currentColor;
+}
+
+.toggle-nav{
+    display: none;
+}
+
+.toggle-nav:checked ~ .burger_nav{
+    transform: scale(1,1);
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.toggle-nav:checked ~ .burger_nav a{
+    opacity: 1;
+}
+
+label:hover{
+    cursor: pointer;
+}
+
+/*** HEADER ***/
+header{
+    text-align: center;
+    background: linear-gradient(#cfc6ba3e, #cfc6ba3e), url("/images/bg/open_hands1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #3B4140;
+    color: white;
+}
+
+.square{
+    display: inline-block;
+    width: 450px;
+    padding: 30px;
+    margin: 160px 0 82px 0;
+    background-color: rgba(1, 1, 1, 0.4);
+    backdrop-filter: blur(4px);
+    box-shadow: 0px 0px 10px 5px rgba(185, 200, 192, 0.254);
+}
+
+.gradient{
+    margin: 0 auto;
+    padding-top: 5px;
+    font-family: 'Tangerine', cursive;
+    font-size: 4.3rem;
+    font-weight: lighter;
+    background: linear-gradient(85deg, rgba(34,193,195,1) 0%, rgba(253,187,45,0.9) 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.square img{
+    width: 320px;
+    padding: 20px 0;
+}
+.logo-mobile{
+    display: none;
+}
+.reflexo-title-mobile{
+    display: none;
+}
+
+.square p{
+    margin: 0;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 1.1rem;
+}
+
+.square a{
+    padding: 15px;
+    width: 150px;
+    margin: 35px auto 10px auto;
+    border: 2px white solid;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.4s;
+}
+.square a:hover{
+    background: transparent;
+    color: #9acd9a;
+    border: #9acd9a solid;
+}
+
+/*** HEADER REIKI ***/
+.white_title{
+    color: white;
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    margin: 0;
+    word-spacing: 1rem;
+    text-transform: uppercase;
+}
+
+/*** ARTICLE REIKI ***/
+.article{
+    padding: 40px 0 60px 0;
+    scroll-margin-top: 5rem;
+}
+.article h2{
+    text-align: center;
+    margin: 0;
+    word-spacing: 0.5rem;
+}
+
+.article_reiki{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 90px 0 80px 0;
+    gap: 0.5rem;
+}
+
+.article_reiki h4{
+    color: #9393E5;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.v-line{
+    border-left: solid rgba(0, 0, 0, 0.769);
+    position: absolute;
+    height: 10%;
+    left: 50%;
+}
+
+.reiki-manip2{
+    width: 300px;
+    line-height: 5rem;
+}
+.reiki-manip{
+    width: 350px;
+    padding-top: 60px;
+}
+.chakras{
+    width: 350px;
+    padding-top: 60px;
+}
+.img-lahochi{
+    width: 400px;
+    line-height: 5rem;
+}
+.lahochi-manip{
+    width: 400px;
+    padding-top: 60px;
+}
+.reflexo-egypt{
+    width: 400px;
+    text-align: center;
+    line-height: 2.1rem;
+}
+.manip-reflexo{
+    width: 400px;
+    padding-top: 60px;
+    line-height: 1.5rem;
+}
+.reflexo-list{
+    width: 550px;
+    padding-top: 60px;
+}
+.amma{
+    width: 400px;
+    line-height: 2rem;
+}
+.article a{
+    background-image: linear-gradient(to right top, #88c2a1, #9acd9a, #b2d791, #d0df88, #f2e582);
+    width: 150px;
+    padding: 15px 10px;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.09rem;
+    transition: all 0.4s;
+}
+.article a:hover{
+    color: #9acd9a;
+    background: transparent;
+    border: 2.5px #9acd9a solid;
+}
+
+/*** SECTION SERVICES ***/
+.services{
+    text-align: center;
+    padding: 40px 0 40px 0;
+    scroll-margin-top: 4rem;
+}
+
+h2{
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 2rem;
+}
+
+.grid_services{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    gap: 5rem 0.5rem;
+    grid-template-columns: 1fr 1fr;
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.grid_elements{
+    width: 350px;
+    margin: auto;
+}
+
+.grid_elements img{
+    width: 100px;
+}
+
+.grid_elements h4{
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.grid_elements p{
+    font-size: 1rem;
+    color: #414141;
+    margin-bottom: 25px;
+}
+
+.grid_elements a{
+    width: 160px;
+    background-color: #9493E0;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    border: #9493E0 solid;
+    transition: all 0.5s;
+}
+.grid_elements a:hover{
+    background-color: white;
+    color: #9493E0;
+}
+
+/*** SECTION TARIFS ***/
+.tarifs{
+    background-color: #b6b5b529;
+    text-align: center;
+    padding: 2.5rem 0 3.75rem 0;
+    scroll-margin-top: 4.5rem;
+}
+
+.price_list{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 40px 0 30px 0;
+    gap: 2.5rem;
+}
+.price_seg{
+    width: 280px;
+}
+.price_seg:nth-child(2) p, .price_seg:last-child p{
+    line-height: 4.29rem;
+}
+
+.price_list h3{
+    background-image: linear-gradient(to right top, #88c2a1, #9acd9a, #b2d791, #d0df88, #f2e582);
+    margin: 0;
+    padding: 4rem 0;
+    color: white;
+    box-shadow: 0 10px 10px grey;  
+}
+
+.tarif_flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 5px 10px;
+    background-color: white;
+    box-shadow: 0 7px 10px grey;
+}
+
+.tarif_flex p{
+    line-height: 30px;
+}
+
+
+/*** FOOTER ***/
+footer{
+    background-color: #424847;
+    background-image: url(/images/bg/bg.png);
+    padding: 1.5rem 0 1rem 0;
+    color: white;
+    font-size: 1rem;
+}
+
+footer h2{
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+}
+
+.contact{
+    justify-content: space-evenly;
+}
+
+footer h6{
+    color: #9493E0;
+    font-size: 1.1rem;
+}
+
+i{
+    color: #9493E0;
+}
+
+.icons8{
+    display: flex;
+    gap: 0.5rem;
+    padding-left: 1rem;
+    margin-top: 4rem;
+    font-size: 0.8rem;
+}
+
+.icons8 a{
+    color: #9493E0;
+    font-weight: bold;
+}
+.icons8 a:hover{
+    color: rgba(159, 158, 158, 0.599);
+}
+/*** MEDIA QUERIES ***/
+@media screen and (max-width: 1024px) {
+    .column2{
+        flex-direction: column-reverse;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .reflexo-list{
+        margin: 0 auto;
+        max-width: 90vw;
+    }
+}
+@media screen and (max-width: 905px) {
+    .price_list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    .price_seg{
+        width: 100%;
+    }
+    .price_seg:first-child{
+        grid-row: 1 / 3;
+    }
+    .price_seg:first-child p{
+        line-height: 7.15rem;
+    }
+    .price_seg:last-child{
+        grid-column: 2;
+    }
+    .price_seg:nth-child(2) p, .price_seg:last-child p{
+        line-height: 1.875rem;
+    }
+    .reiki-manip2, .img-lahochi{
+        text-align: center;
+    }
+    .column3{
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .manip-reflexo{
+        margin: 0 auto;
+        width: 500px;
+        max-width: 90vw;
+    }
+}
+@media screen and (max-width: 850px){
+    .column{
+        flex-direction: column;
+    }
+    .lahochi-manip{
+        width: 90vw;
+        max-width: 90vw;
+        margin: 0 auto;
+        line-height: 2.2rem;
+        text-align: center;
+    }
+    .amma{
+        width: 100%;
+        margin: 0 auto;
+        line-height: 2.2rem;
+        text-align: center;
+    }
+    .amma p{
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+    img.amma{
+        padding-top: 30px;
+        width: 400px;
+        max-width: 90vw;
+    }
+    .article_reiki.column{
+        padding-top: 30px;
+    }
+    .reverse2{
+        flex-direction: column-reverse;
+    }
+    .article_reiki.reverse2{
+        padding-top: 30px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .nav_right{
+        display: none;
+    }
+    .toggle-nav-label{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-right: 48px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    span, span::before, span::after{
+        display: block;
+        background-color: white;
+        height: 2.5px;
+        width: 2rem;
+        border-radius: 10px;
+        position: relative;
+    }
+    span::before, span::after{
+        content: '';
+        position: absolute;
+    }
+    span::before{
+        bottom: 7px;
+    }
+    span::after{
+        top: 7px;
+    }
+    .grid_services{
+        display: flex;
+        flex-direction: column;
+    }
+    .grid_elements{
+        margin: 0;
+        width: 100%;
+    }
+    .price_list{
+        display: flex;
+        flex-direction: column;
+        max-width: 70vw;
+        gap: 2.5rem;
+    }
+    .price_seg:first-child p{
+        line-height: 1.875rem;
+    }
+    .article_reiki{
+        padding: 60px 0 60px 0;
+    }
+    .reiki-manip2{
+        line-height: 2rem;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 80vw;
+    }
+    img.reiki-manip2{
+        padding-top: 50px;
+    }
+    .block{
+        flex-direction: column;
+    }
+    .reverse{
+        flex-direction: column-reverse;
+    }
+    .reiki-manip, .reiki-manip p, .reiki-manip h4{
+        width: 80vw;
+        max-width: 80vw;
+        margin: 0 auto;
+        line-height: 2.2rem;
+        text-align: center;
+    }
+    img.reiki-manip{
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .chakras{
+        margin: 0 auto;
+        text-align: center;
+        max-width: 80vw;
+    }
+    .img-lahochi{
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 90vw;
+    }
+    .reflexo-egypt{
+        margin: 0 auto;
+        max-width: 90vw;
+    }
+}
+@media screen and (max-width: 620px) {
+    .contact{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+    footer h6{
+        margin: 2rem 0 2rem 0;
+        text-align: center;
+    }
+    footer p {
+        text-align: center;
+    }
+}       
+@media screen and (max-width: 600px) {
+    .square img{
+        width: 80%;
+    }
+    .square{
+        width: 80vw;
+    }
+}
+@media screen and (max-width: 550px) {
+    .gradient{
+        font-size: 12vw;
+    }
+}
+@media screen and (max-width: 530px) {
+    .reflexo-title{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 420px) {
+    .nav-services .toggle-nav-label{
+        padding-right: 10px;
+    }
+    .reflexo-title{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    .square p{
+        font-size: 1rem;
+    }
+    .gradient{
+        font-size: 3.5rem;
+    }
+    .nav_left p{
+        font-size: 2rem;
+    }
+    .article h2{
+        font-size: 1.55rem;
+    }
+}
+@media screen and (max-width: 380px) {
+    .toggle-nav-label{
+        padding-right: 10px;
+    }
+    .burger_ul{
+        padding-right: 10px;
+    }
+    .logo-desktop{
+        display: none;
+    }
+    .logo-mobile{
+        display: block;
+        margin: 0 auto;
+    }
+    .nav_left{
+        gap: 0;
+    }
+    .price_list{
+        max-width: 90vw;
+    }
+    .massage-title{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 360px) {
+    .lahochi-title{
+        font-size: 2.2rem;
+    }
+    .reflexo-title{
+        display: none;
+    }
+    .reflexo-title-mobile{
+        display: block;
+        font-size: 1.5rem;
+    }
+    .square a{
+        width: 100px;
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 330px) {
+    .nav_left img{
+        display: none;
+    }
+    nav{
+        height: 70px;
+    }
+    .lahochi-title{
+        font-size: 1.85rem;
+    }
+}
