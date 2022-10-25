@@ -134,7 +134,7 @@ label:hover{
 /*** HEADER ***/
 header{
     text-align: center;
-    background: linear-gradient(#cfc6ba3e, #cfc6ba3e), url("/images/bg/open_hands1.jpg");
+    background: linear-gradient(#cfc6ba3e, #cfc6ba3e), url("/images/bg/open_hands1.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -227,7 +227,7 @@ header{
     gap: 0.5rem;
 }
 
-.article_reiki h4{
+.article_reiki h3{
     color: #9393E5;
     font-size: 1.2rem;
     margin: 0;
@@ -326,7 +326,7 @@ h2{
     width: 100px;
 }
 
-.grid_elements h4{
+.grid_elements h3{
     font-size: 1.5rem;
     margin: 20px 0;
 }
@@ -415,7 +415,7 @@ footer h2{
     justify-content: space-evenly;
 }
 
-footer h6{
+footer h4{
     color: #9493E0;
     font-size: 1.1rem;
 }
@@ -589,7 +589,7 @@ i{
     .reverse{
         flex-direction: column-reverse;
     }
-    .reiki-manip, .reiki-manip p, .reiki-manip h4{
+    .reiki-manip, .reiki-manip p, .reiki-manip h3{
         width: 80vw;
         max-width: 80vw;
         margin: 0 auto;
@@ -624,7 +624,7 @@ i{
         justify-content: center;
         gap: 3rem;
     }
-    footer h6{
+    footer h4{
         margin: 2rem 0 2rem 0;
         text-align: center;
     }
